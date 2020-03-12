@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="359af91e-7db0-464f-a397-419771cc7f50" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Standalone_Nguyen2020_RNNAD-master" />
+  </component>
+  <component name="ProjectId" id="1XmNUBGHI4S7XddgtHAtwU2sKH0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Shell Script.CBIG_RNN_example.sh (1)">
+    <configuration name="RNNAD" type="PythonConfigurationType" factoryName="Python">
+      <module name="Standalone_Nguyen2020_RNNAD-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda2/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CBIG_RNN_example.sh (1)" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/../LSTMAD/examples/CBIG_RNN_example.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/../LSTMAD/examples" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CBIG_RNN_example.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/examples/CBIG_RNN_example.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.RNNAD" />
+      <item itemvalue="Shell Script.CBIG_RNN_example.sh" />
+      <item itemvalue="Shell Script.CBIG_RNN_example.sh (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.CBIG_RNN_example.sh (1)" />
+        <item itemvalue="Shell Script.CBIG_RNN_example.sh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="359af91e-7db0-464f-a397-419771cc7f50" name="Default Changelist" comment="" />
+      <created>1581647322267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581647322267</updated>
+      <workItem from="1581647324800" duration="2332000" />
+      <workItem from="1582428656420" duration="3868000" />
+      <workItem from="1582444471029" duration="88000" />
+      <workItem from="1582517664279" duration="11102000" />
+      <workItem from="1582558681396" duration="253000" />
+      <workItem from="1582559063090" duration="3001000" />
+      <workItem from="1582562215684" duration="12000" />
+      <workItem from="1582562287444" duration="19001000" />
+      <workItem from="1583405102194" duration="2587000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="263" y="41" width="800" height="687" key="#Inspections" timestamp="1581647515214">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state x="263" y="41" width="800" height="687" key="#Inspections/0.0.1316.768@0.0.1316.768" timestamp="1581647515214" />
+    <state x="232" y="40" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582560515412">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state x="232" y="40" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1316.768@0.0.1316.768" timestamp="1582560515412" />
+    <state x="260" y="215" width="450" height="523" key="FileChooserDialogImpl" timestamp="1582561775925">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state x="260" y="215" width="450" height="523" key="FileChooserDialogImpl/0.0.1316.768@0.0.1316.768" timestamp="1582561775925" />
+    <state width="1272" height="181" key="GridCell.Tab.0.bottom" timestamp="1582548922794">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state width="1272" height="181" key="GridCell.Tab.0.bottom/0.0.1316.768@0.0.1316.768" timestamp="1582548922794" />
+    <state width="1272" height="181" key="GridCell.Tab.0.center" timestamp="1582548922794">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state width="1272" height="181" key="GridCell.Tab.0.center/0.0.1316.768@0.0.1316.768" timestamp="1582548922794" />
+    <state width="1272" height="181" key="GridCell.Tab.0.left" timestamp="1582548922793">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state width="1272" height="181" key="GridCell.Tab.0.left/0.0.1316.768@0.0.1316.768" timestamp="1582548922793" />
+    <state width="1272" height="181" key="GridCell.Tab.0.right" timestamp="1582548922794">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state width="1272" height="181" key="GridCell.Tab.0.right/0.0.1316.768@0.0.1316.768" timestamp="1582548922794" />
+    <state x="173" y="28" width="1007" height="740" key="SettingsEditor" timestamp="1582674974786">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state x="173" y="28" width="1007" height="740" key="SettingsEditor/0.0.1316.768@0.0.1316.768" timestamp="1582674974786" />
+    <state x="343" y="207" key="com.intellij.ide.util.TipDialog" timestamp="1583405104960">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state x="343" y="207" key="com.intellij.ide.util.TipDialog/0.0.1316.768@0.0.1316.768" timestamp="1583405104960" />
+    <state x="383" y="276" width="540" height="226" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582558920857">
+      <screen x="0" y="0" width="1316" height="768" />
+    </state>
+    <state x="383" y="276" width="540" height="226" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1316.768@0.0.1316.768" timestamp="1582558920857" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Standalone_Nguyen2020_RNNAD_master$RNNAD.coverage" NAME="RNNAD Coverage Results" MODIFIED="1582548556719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/Standalone_Nguyen2020_RNNAD_master$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1582433381323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
