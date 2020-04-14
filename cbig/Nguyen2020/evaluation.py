@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# Written by Minh Nguyen and CBIG under MIT license:
-# https://github.com/ThomasYeoLab/CBIG/blob/master/LICENSE.md
 from __future__ import print_function, division
 import argparse
 import itertools
@@ -87,8 +84,8 @@ def MAUC(data, no_classes):
     sum_avals = 0
     for pairing in class_pairs:
         sum_avals += (
-            a_value(data, zero_label=pairing[0], one_label=pairing[1]) +
-            a_value(data, zero_label=pairing[1], one_label=pairing[0])) / 2.0
+                             a_value(data, zero_label=pairing[0], one_label=pairing[1]) +
+                             a_value(data, zero_label=pairing[1], one_label=pairing[0])) / 2.0
 
     return sum_avals * (2 / float(no_classes * (no_classes - 1)))  # Eqn 7
 
@@ -132,6 +129,116 @@ def calcBCA(estimLabels, trueLabels, no_classes):
         bcaAll += [bcaCurr]
 
     return np.mean(bcaAll)
+
+
+# 下面向我们走来的是分类性能指标四个元老，准确率、查准率、查全率、f1
+
+def calcacc(estimLabels, trueLabels, no_classes):
+    """
+    Calculates the acc
+    Args:
+        estimLabels (ndarray): predicted classes
+        trueLabels (ndarray): ground truth classes
+        no_classes (int): The number of classes in the dataset.
+    Returns:
+        acc value
+    """
+    accAll = []
+    for c0 in range(no_classes):
+        # c0 can be either CTL, MCI or AD
+        TP = np.sum((estimLabels == c0) & (trueLabels == c0))
+        TN = np.sum((estimLabels != c0) & (trueLabels != c0))
+        FP = np.sum((estimLabels == c0) & (trueLabels != c0))
+        FN = np.sum((estimLabels != c0) & (trueLabels == c0))
+
+        accCurr = (TP + TN)/(TP + TN + FP + FN)
+        accAll += [accCurr]
+
+    return np.mean(accAll)
+
+
+def calcpre(estimLabels, trueLabels, no_classes):
+    """
+    Calculates the presion
+    Args:
+        estimLabels (ndarray): predicted classes
+        trueLabels (ndarray): ground truth classes
+        no_classes (int): The number of classes in the dataset.
+    Returns:
+        pre value
+    """
+    preAll = []
+    for c0 in range(no_classes):
+        # c0 can be either CTL, MCI or AD
+
+        # one example when c0=CTL
+        # TP - label was estimated as CTL, and the true label was also CTL
+        # FP - label was estimated as CTL, but the true label was not CTL
+        TP = np.sum((estimLabels == c0) & (trueLabels == c0))
+        TN = np.sum((estimLabels != c0) & (trueLabels != c0))
+        FP = np.sum((estimLabels == c0) & (trueLabels != c0))
+        FN = np.sum((estimLabels != c0) & (trueLabels == c0))
+
+        preCurr = (1. * TP) / (TP + FP)
+        preAll += [preCurr]
+
+    return np.mean(preAll)
+
+
+def calcrec(estimLabels, trueLabels, no_classes):
+    """
+    Calculates the rec
+    Args:
+        estimLabels (ndarray): predicted classes
+        trueLabels (ndarray): ground truth classes
+        no_classes (int): The number of classes in the dataset.
+    Returns:
+        recall value
+    """
+    recAll = []
+    for c0 in range(no_classes):
+        # c0 can be either CTL, MCI or AD
+
+        # one example when c0=CTL
+        # TP - label was estimated as CTL, and the true label was also CTL
+        # FP - label was estimated as CTL, but the true label was not CTL
+        TP = np.sum((estimLabels == c0) & (trueLabels == c0))
+        TN = np.sum((estimLabels != c0) & (trueLabels != c0))
+        FP = np.sum((estimLabels == c0) & (trueLabels != c0))
+        FN = np.sum((estimLabels != c0) & (trueLabels == c0))
+
+        recCurr = (1. * TP) / (TP + FN)
+        recAll += [recCurr]
+
+    return np.mean(recAll)
+
+
+def calcf1(estimLabels, trueLabels, no_classes):
+    """
+    Calculates the f1
+    Args:
+        estimLabels (ndarray): predicted classes
+        trueLabels (ndarray): ground truth classes
+        no_classes (int): The number of classes in the dataset.
+    Returns:
+        recall value
+    """
+    f1All = []
+    for c0 in range(no_classes):
+        # c0 can be either CTL, MCI or AD
+
+        # one example when c0=CTL
+        # TP - label was estimated as CTL, and the true label was also CTL
+        # FP - label was estimated as CTL, but the true label was not CTL
+        TP = np.sum((estimLabels == c0) & (trueLabels == c0))
+        TN = np.sum((estimLabels != c0) & (trueLabels != c0))
+        FP = np.sum((estimLabels == c0) & (trueLabels != c0))
+        FN = np.sum((estimLabels != c0) & (trueLabels == c0))
+
+        f1Curr = (2 * TP) / (2 * TP + FN + FP)
+        f1All += [f1Curr]
+
+    return np.mean(f1All)
 
 
 def nearest(series, target):
@@ -187,7 +294,7 @@ def parse_data(_ref_frame, _pred_frame):
     pred_vent, true_vent = mask(pred_vent, _ref_frame.Ventricles)
 
     return true_label_and_prob, pred_diag, pred_adas, pred_vent, \
-        true_diag, true_adas, true_vent
+           true_diag, true_adas, true_vent
 
 
 def is_date_column(col):
@@ -196,7 +303,7 @@ def is_date_column(col):
 
 
 def eval_submission(ref_frame, pred_frame):
-    """ Evaluate mAUC, BCA, ADAS13 MAE, and ventricles MAE """
+    """ Evaluate acc, pre, rec, f1, ADAS13 MAE, and ventricles MAE """
     assert is_date_column(ref_frame['CognitiveAssessmentDate'])
     assert is_date_column(ref_frame['ScanDate'])
     assert is_date_column(pred_frame['Forecast Date'])
@@ -204,17 +311,20 @@ def eval_submission(ref_frame, pred_frame):
     true_labels_and_prob, p_diag, p_adas, p_vent, t_diag, t_adas, t_vent = \
         parse_data(ref_frame, pred_frame)
 
-    try:
-        mauc = MAUC(true_labels_and_prob, no_classes=3)
-    except ZeroDivisionError:
-        mauc = float('NaN')
+    # try:
+    #     mauc = MAUC(true_labels_and_prob, no_classes=3)
+    # except ZeroDivisionError:
+    #     mauc = float('NaN')
 
-    bca = calcBCA(p_diag, t_diag.astype(int), no_classes=3)
+    acc = calcacc(p_diag, t_diag.astype(int), no_classes=3)
+    pre = calcpre(p_diag, t_diag.astype(int), no_classes=3)
+    rec = calcrec(p_diag, t_diag.astype(int), no_classes=3)
+    f1 = calcf1(p_diag, t_diag.astype(int), no_classes=3)
 
     adas = np.mean(np.abs(p_adas - t_adas))
     vent = np.mean(np.abs(p_vent - t_vent))
 
-    return {'mAUC': mauc, 'bca': bca, 'adasMAE': adas, 'ventsMAE': vent}
+    return {'ACC': acc, 'PRE': pre, 'REC': rec, 'F1': f1, 'adasMAE': adas, 'ventsMAE': vent}
 
 
 if __name__ == "__main__":
@@ -223,10 +333,9 @@ if __name__ == "__main__":
     parser.add_argument('--prediction', '-p', required=True)
 
     args = parser.parse_args()
-    result = eval_submission(
-        misc.read_csv(args.reference), misc.read_csv(args.prediction))
+    result = eval_submission(misc.read_csv(args.reference), misc.read_csv(args.prediction))
 
-    print('########### Metrics for clinical status ##################')
-    print('mAUC', result['mAUC'], 'bca', result['bca'])
-    print('########### Mean Absolute Error (MAE) ##################')
+    print('########### Average Classification performance ##################')
+    print('ACC', result['ACC'], 'PRE', result['PRE'], 'REC', result['REC'], 'F1', result['F1'])
+    print('########### Average Regression performance  ##################')
     print('adasMAE', result['adasMAE'], 'ventsMAE', result['ventsMAE'])
