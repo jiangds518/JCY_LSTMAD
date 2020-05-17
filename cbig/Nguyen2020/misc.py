@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
-# Written by Minh Nguyen and CBIG under MIT license:
-# https://github.com/ThomasYeoLab/CBIG/blob/master/LICENSE.md
 from __future__ import print_function, division
 import time
 from datetime import datetime

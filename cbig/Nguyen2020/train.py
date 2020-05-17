@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# Written by Minh Nguyen and CBIG under MIT license:
-# https://github.com/ThomasYeoLab/CBIG/blob/master/LICENSE.md
 from __future__ import print_function, division
 import argparse
 import json
@@ -166,7 +163,7 @@ def train(args):
         for i in range(args.epochs):
             loss = train_1epoch(args, model, data['train'], optimizer)
             log_info = (i + 1, args.epochs, misc.time_from(start)) + loss
-            log('%d/%d %s ENT %.3f, MAE %.3f' % log_info)
+            log('%d/%d %s ENT_loss %.3f, MAE_loss %.3f' % log_info)
     except KeyboardInterrupt:
         print('Early exit')
 

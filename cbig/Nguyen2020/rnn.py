@@ -2,17 +2,19 @@ import math
 import torch
 import torch.nn as nn
 
-class LSTMCell(nn.Module):
-    """
-    A LSTM cell.
-    Args:
-        input_size:
-        hidden_size:
 
-    Inputs: input,hidden
+# class LSTMCell(nn.Module):
+#     """
+#     A LSTM cell.
+#     Args:
+#         input_size:
+#         hidden_size:
+#
+#     Inputs: input,hidden
+#
+#     Outputs:
+#     """
 
-    Outputs:
-    """
 
 class MinimalRNNCell(nn.Module):
     """A Minimal RNN cell .
