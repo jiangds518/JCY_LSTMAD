@@ -1,5 +1,3 @@
-# Written by Minh Nguyen and CBIG under MIT license:
-# https://github.com/ThomasYeoLab/CBIG/blob/master/LICENSE.md
 import unittest
 import numpy as np
 import cbig.Nguyen2020.dataloader as dataloader

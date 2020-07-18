@@ -170,8 +170,12 @@ def train(args):
     torch.save(model, args.out)
     save_config(args, '%s.json' % args.out)
 
-
 def get_args():
+    """
+    make a parameters extract
+    Returns:
+        parser.parse_args(),  include training hyperparameters and input/output paths
+    """
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--model', '-m', required=True)
@@ -193,6 +197,7 @@ def get_args():
 
     parser.add_argument('--verbose', action='store_true')
 
+    # 返回解析参数
     return parser.parse_args()
 
 

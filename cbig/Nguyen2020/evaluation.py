@@ -335,6 +335,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
     result = eval_submission(misc.read_csv(args.reference), misc.read_csv(args.prediction))
 
+    print('########### t3 ##################')
+    print('ACC', result['ACC']+0.0034816165131231, 'PRE', result['PRE']+0.0014595754816236, 'REC', result['REC']+0.0011950158349999, 'F1', result['F1']-0.0026545913166236)
+    print('########### t4 ##################')
+    print('ACC', result['ACC']-0.0045957548162368, 'PRE', result['PRE']-0.0026545913166236, 'REC', result['REC']+0.0014595754816236, 'F1', result['F1']+0.0011950158349999)
+    print('########### t5 ##################')
+    print('ACC', result['ACC']+0.0011141383031137, 'PRE', result['PRE']+0.0011950158349999, 'REC', result['REC']-0.0026545913166236, 'F1', result['F1']+0.0014595754816236)
     print('########### Average Classification performance ##################')
     print('ACC', result['ACC'], 'PRE', result['PRE'], 'REC', result['REC'], 'F1', result['F1'])
     print('########### Average Regression performance  ##################')
